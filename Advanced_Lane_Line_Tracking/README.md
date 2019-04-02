@@ -12,4 +12,4 @@ In this project, the goal is to write a software pipeline to identify the lane b
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
-The final output is application of these steps to a video stream which is labeled by "annotated" or "smoothed." The details of how this was implemented is found in the jupter notebook in this directory.
+The final output is application of these steps to a video stream which is found in (project_video_annotated_smoothed.mp4). The details of how this was implemented is found in the jupter notebook in this directory or if you prefer a pdf version is also provided.
