@@ -13056,25 +13056,6 @@ ul.typeahead-list  > li > a.pull-right {
 .ansi-bold { font-weight: bold; }
 
     </style>
-<style type="text/css">
-    body[data-notebook-name] > #header #header-container:not(.show-panel), /* body has data-notebook-name attribute when 
-a notebook is open. this rule won't be applied when the notebook is not open (in 404 view for example) */
-body[data-notebook-name] #menubar-container #maintoolbar:not(.show-panel),
-body[data-notebook-name] #menubar-container ul.navbar-nav:not(.show-panel) {
-  display: none;
-}
-
-#menubar.only-panel #menus.navbar-default {
-    background: #fff;
-    border-color: #fff;
-}
-
-.toolbar.with-statusbar{
-    margin-top: 3px;
-    margin-bottom: 0;
-}
-
-    </style>
 
 
 <style type="text/css">
@@ -13135,7 +13116,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Convolutional-Neural-Network-Classifier-of-Traffic-Signs">Convolutional Neural Network Classifier of Traffic Signs<a class="anchor-link" href="#Convolutional-Neural-Network-Classifier-of-Traffic-Signs">&#182;</a></h1><p>In this project, we are given a data set of $51,839$ samples of $32\times32$ labeled RGB images of German traffic signs which can be found here, (<a href="http://benchmark.ini.rub.de/?section=gtsrb&amp;subsection=dataset">German Traffic Sign Dataset</a>). Our goal in this project is to build, train, and analyze an image classifier inspired by the LeNet Convolutional Neural Network (CNN) architecture.  We will perform data exploration, where we try to find some useful preprocessing steps that allows us to extract more useful features for classification, artificially generate additional image samples through image transformations to vastly expand our dataset, build a tensorflow CNN model, tune the model hyper-parameters, analyze the classifier operating characteristics, and finally examine the model filters that are generated from the training of the CNN.  Many parts of this notebook are inspired by Alex Staravoitau's work (<a href="https://navoshta.com/traffic-signs-classification/">https://navoshta.com/traffic-signs-classification/</a>) and his suggested architecture and regularization techniques and I highly recommend viewing his work.  The the work of Pierre Sermanet and Yann LeCun (<a href="http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf">http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf</a>) is also key to finding features which work best for this task.</p>
+<h1 id="Convolutional-Neural-Network-Classifier-of-Traffic-Signs">Convolutional Neural Network Classifier of Traffic Signs<a class="anchor-link" href="#Convolutional-Neural-Network-Classifier-of-Traffic-Signs">&#182;</a></h1><p>In this project, we are given a data set of $51,839$ samples of $32\times32$ labeled RGB images of German traffic signs which can be found at this link, (<a href="http://benchmark.ini.rub.de/?section=gtsrb&amp;subsection=dataset">German Traffic Sign Dataset</a>). Our goal in this project is to build, train, and analyze an image classifier inspired by the LeNet Convolutional Neural Network (CNN) architecture.  We will perform data exploration, where we try to find some useful preprocessing steps that allows us to extract more useful features, artificially generate additional image samples through image transformations, build a CNN model in tensorflow, tune the model hyper-parameters, analyze the classifier operating characteristics, and finally examine the model filters that are generated from the training of the CNN.</p>
+<p>Many parts of this notebook are inspired by <a href="https://navoshta.com/traffic-signs-classification/">Alex Staravoitau's work</a> His suggested architecture and regularization techniques are employeed in this notebook and I highly recommend viewing his work.  The work of <a href="http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf">Pierre Sermanet and Yann LeCun</a> is also key to finding features which work best for this task.</p>
 
 </div>
 </div>
@@ -14948,7 +14930,7 @@ Normalizing and shuffling
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://navoshta.com/images/posts/traffic-signs-classification/traffic-signs-architecture.png" alt="Staravoitau&#39;s architecture"></p>
+<p><img src="./traffic-signs-architecture_diagram.png" alt="Staravoitau&#39;s architecture"></p>
 <p>Staravoitau's image <a href="https://navoshta.com/traffic-signs-classification/">source</a></p>
 
 </div>
@@ -15409,6 +15391,7 @@ Model saved
 </tr>
 </tbody>
 </table>
+<p>I also tried a 3-layer CNN without out the multiscale features fed into the final flattened vector that is fed into the fully connected layer, and that network was able to achieve training accuracy 1.0, and validation accuracy 0.947, which seems over-tuned even with L2 regularization at $0.0001$ and dropout added, and I will use the multi-scale features network as the final model.</p>
 <hr>
 <h2 id="Testing-the-Model-on-New-Images">Testing the Model on New Images<a class="anchor-link" href="#Testing-the-Model-on-New-Images">&#182;</a></h2><p>In the next section we want to analyze how well this model works on data its surely never seen and look at its confidence in its predictions.  To do this I've downloaded 5 German traffic signs from the internet (the sources are provided below) processed them in such a way that they have similar resolution and zoom level as the training, processed these images, and ran the classifier on these images.  Each step is carried out below.</p>
 
