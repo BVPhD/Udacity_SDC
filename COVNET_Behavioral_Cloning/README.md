@@ -15,6 +15,6 @@ The model was able to use center of the car forward facing images to interpret t
 The files provided in this repo: 
 * model.py (script used to create and train the model)
 * drive.py (script to drive the car provided by Udacity)
-* model.h5 (a trained Keras model)
+* nvidia_model_fnl.h5 (a trained Keras model)
 * Behavioral_Cloning.ipynb (Discussion of project methods and code, a pdf version is also provided)
 * track1_lap.mp4 (a video recording of vehicle driving autonomously around the track for one full lap)
