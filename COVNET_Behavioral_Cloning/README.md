@@ -8,7 +8,7 @@ In this project the goal is to use a Unity car driving simulator (provided to me
 
 I used a convolutional nueral network inspired from [M. Bojarski *et al*](https://arxiv.org/pdf/1604.07316v1.pdf) with an architecture provided in the image below:
 
-[covnet architecture](./covnet_diagram.jpg)
+![covnet architecture](./covnet_diagram.jpg)
 
 The model was able to use center of the car forward facing images to interpret the scenery and make correct steering inputs to travel around the track both in the clockwise and anti-clockwise directions.  Detailed discussion of methods and how this network was trained can be found in the Behavioral_Cloning.ipynb notebook.
 
