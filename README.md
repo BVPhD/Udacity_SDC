@@ -7,4 +7,5 @@ Note: the notebooks render best when viewed in a Jupyter notebook session [(jupy
 * [Finding Road Lane Lines Using Basic CV Techniques](https://github.com/BVPhD/Udacity_SDC/blob/master/Find_Lane_Lines/Hough_Lane_Line_Detection.ipynb) 
 * [Finding Road Lane Lines Using Advanced CV Techniques](https://github.com/BVPhD/Udacity_SDC/blob/master/Advanced_Lane_Line_Tracking/Advanced_Lane_Detection.ipynb)  
 * [German Road Sign Classification with a Deep CNN](https://github.com/BVPhD/Udacity_SDC/blob/master/COVNET_Road_Sign_Classifier/Traffic_Sign_Classifier.ipynb)
+* [Behavioral Cloning with a Deep CNN](https://github.com/BVPhD/Udacity_SDC/blob/master//COVNET_Behavioral_Cloning/Behavioral_Cloning.ipynb)
 * [Extended Kalman Filter](https://github.com/BVPhD/Udacity_SDC/blob/master/Extended_Kalman_Filter/EKF_theory.ipynb)
